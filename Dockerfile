@@ -27,24 +27,24 @@ RUN apt-get update && apt-get upgrade -y \
     wget \
     unzip \
     zlib1g-dev \
-    && docker-php-ext-install -j$(nproc) \
+    default-mysql-client \
+    && docker-php-ext-install \
     bcmath \
     bz2 \
     calendar \
     exif \
     gettext \
-    default-mysql-client \
     mysqli \
     opcache \
     pdo_mysql \
     soap \
     xsl \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install -j$(nproc) gd \
+    && docker-php-ext-install gd \
     && PHP_OPENSSL=yes docker-php-ext-configure imap --with-kerberos --with-imap-ssl \
-    && docker-php-ext-install -j$(nproc) imap \
+    && docker-php-ext-install imap \
     && docker-php-ext-configure intl \
-    && docker-php-ext-install -j$(nproc) intl \
+    && docker-php-ext-install intl \
     && docker-php-ext-configure ldap \
     && docker-php-ext-install ldap \
     && docker-php-ext-configure zip \
