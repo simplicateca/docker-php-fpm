@@ -1,4 +1,4 @@
-FROM php:8.1.8-fpm
+FROM php:7.4.10-fpm
 
 LABEL maintainer="Steve Comrie <steve@simplicate.ca>"
 
