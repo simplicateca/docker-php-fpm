@@ -1,6 +1,6 @@
 # docker-php-fpm
 
-* `8.1.8-fpm`: Craft CMS / Commerce ready php-fpm image.
+* `7.4.10-fpm`: Craft CMS / Commerce ready php-fpm image.
 
 ## Modules
 
